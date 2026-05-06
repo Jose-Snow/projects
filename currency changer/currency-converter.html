@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="currency-converter.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Currency Converter</h1>
+
+    <form action="" id="form-container">
+
+      <div id="amount-label">
+        <label for="amount" >Amount to be converted</label>
+      </div>
+      <div id="amount-input">
+         <input type="number" id="amount" name="amount" required>
+      </div>
+
+      <div id="currency">
+          <div id="from-currency-container">
+          <label for="from-currency" >From </label>
+          <div>
+            <select name="from-currency" id="from-currency" required>
+            <option value="USD">USD (US Dollar)</option>
+            <option value="EUR">EUR (Euro)</option>
+            <option value="JPY">JPY (Japanese Yen)</option>
+            <option value="GBP">GBP (Great Britain Pound)</option>
+            <option value="AUD">AUD (Australian Dollar)</option>
+            <option value="CAD">CAD (Canadian Dollar)</option>
+            <option value="CHF">CHF (Swiss Franc)</option>
+            <option value="NGN">NGN (Nigerian Naira)</option>
+            <option value="NZD">NZD (New Zealand Dollar)</option>
+            <option value="CNY">CNY (Yuan Renminbi)</option>
+
+          </select>
+          </div>
+        </div>
+
+       
+          <button type="button" id="swap-button">SWAP</button>
+     
+
+        <div id="to-currency-container">
+          <label for="to-currency">To</label>
+          <div>
+            <select name="to-currency" id="to-currency" required>
+              <option value="NGN">NGN (Nigerian Naira)</option>
+              <option value="EUR">EUR (Euro)</option>
+              <option value="JPY">JPY (Japanese Yen)</option>
+              <option value="GBP">GBP (Great Britain Pound)</option>
+              <option value="AUD">AUD (Australian Dollar)</option>
+              <option value="CAD">CAD (Canadian Dollar)</option>
+              <option value="CHF">CHF (Swiss Franc)</option>
+              <option value="USD">USD (US Dollar)</option>
+              <option value="NZD">NZD (New Zealand Dollar)</option>
+              <option value="CNY">CNY (Yuan Renminbi)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" id="convert-btn">
+        CONVERT
+      </button>
+    </form>
+
+    <div class="results">
+      <p id="converted-value"></p>
+      <p id="error-message"></p>
+      <p id="errorMessage"></p>
+      <p id="fromRate"></p>
+      <p id="toRate"></p>
+
+    </div>
+
+  </div>
+  
+  <script src="currency-converter.js"></script>
+</body>
+</html>

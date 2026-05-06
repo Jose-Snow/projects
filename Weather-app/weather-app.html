@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="weather-style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <title>Weather App</title>
+</head>
+<body>
+  <div id="app-container">
+    <!-- Search Bar -->
+    <div id="search-wrap">
+      <input type="text" id="input-search" placeholder="Search by city">
+
+      <button type="button" onclick="getWeather()" id="search-Btn">
+        <span class="material-symbols-outlined">search</span> 
+      </button>
+    </div>
+
+    <div id="date-city">
+      <p id="date-data"></p>
+      <h1 id="city-data"></h1>
+    </div>
+
+   <div id="weather">
+     <div id="weather-img"> 
+      <img src="" alt="weather image"> 
+    </div>
+    <div id="description"></div>
+   </div>
+
+
+    <h2 id="temperature"></h2>
+
+    <div id="extra-info">
+     <div class="col">
+      <div id="info">
+        <h5>HIGHS</h5>
+        <p id='high-temp'></p>
+      </div>
+     </div>
+
+     <div class="col">
+      <div id="info">
+        <h5>LOWS</h5>
+        <p id="low-temp"></p>
+      </div>
+     </div>
+    </div>
+
+  
+
+  </div>
+
+  
+  <script src="weather-app.js"></script>
+</body>
+</html>
