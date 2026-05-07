@@ -5,23 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currency Converter</title>
   <link rel="stylesheet" href="currency-converter.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=compare_arrows" />
 </head>
 <body>
   <div id="app">
-    <h1>Currency Converter</h1>
+    <div id="header">
+      <h1>Currency Converter</h1>
+      <p>Real-time exchange rates </p>
+    </div>
 
     <form action="" id="form-container">
 
-      <div id="amount-label">
-        <label for="amount" >Amount to be converted</label>
-      </div>
-      <div id="amount-input">
-         <input type="number" id="amount" name="amount" required>
-      </div>
+     <div class="amount">
+        <div>
+          <label for="amount" >Enter Amount:</label>
+        </div>
+        <div>
+          <input type="number" id="amount" name="amount" required>
+        </div>
+     </div>
 
       <div id="currency">
-          <div id="from-currency-container">
-          <label for="from-currency" >From </label>
+          <div id="from-currency-container" class="from-and-to">
+          <label for="from-currency" >From: </label>
           <div>
             <select name="from-currency" id="from-currency" required>
             <option value="USD">USD (US Dollar)</option>
@@ -40,11 +46,13 @@
         </div>
 
        
-          <button type="button" id="swap-button">SWAP</button>
+          <button type="button" id="swap-button">
+            <span class="material-symbols-outlined">compare_arrows</span>
+          </button>
      
 
-        <div id="to-currency-container">
-          <label for="to-currency">To</label>
+        <div id="to-currency-container" class="from-and-to">
+          <label for="to-currency">To:</label> 
           <div>
             <select name="to-currency" id="to-currency" required>
               <option value="NGN">NGN (Nigerian Naira)</option>

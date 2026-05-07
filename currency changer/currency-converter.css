@@ -18,6 +18,10 @@
   cursor: pointer;
   margin-top:20px;
 }
+#convert-btn:hover{
+  /* background-color: rgb(156, 155, 155); */
+  color: black;
+}
 #currency{
   display: flex;
   justify-content: space-around;
@@ -35,4 +39,63 @@
 #converted-value{
   font-size: 20px;
   font-weight: bold;
+}
+#header h1{
+margin-bottom: 0px;
+}
+#header p{
+margin-top: 0px;
+font-weight: 520 ;
+}
+.amount{
+  margin: 30px 0;
+  font-weight: bold;
+   font-size: 15px;
+}
+.amount input{
+  width:150px;
+  border: solid white;
+  margin-top: 8px;
+  padding: 5px;
+  font-size: 15px;
+  
+}
+
+#swap-button{
+  background-color: rgb(156, 155, 155);
+  border: 1px solid rgb(77, 77, 77);
+  cursor: pointer;
+  border-radius:15px;
+}
+#swap-button:hover{
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 350,
+  'GRAD' 0,
+  'opsz' 24
+}
+.from-and-to{
+  background-color: rgb(193, 191, 191);
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor:pointer;
+}
+.from-and-to select {
+ width:150px;
+ border: solid white;
+ margin-top: 8px;
+ padding: 5px;
+ color: rgb(31, 30, 30);
+ font-size: 12px;
+}
+.from-and-to select:focus {
+  outline: none;
+  border: solid rgb(77, 77, 77);
 }

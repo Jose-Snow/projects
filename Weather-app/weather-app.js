@@ -1,4 +1,4 @@
-//cbbbf23cb4e4ada2a19eb635bcfad0c9
+
 
 //DOM ELEMENTS
 const date = document.getElementById('date-data');
@@ -43,7 +43,7 @@ const getWeather= async ()=> {
 
     const cityName= document.getElementById('input-search').value;
 
-    const weatherDataFetch = await fetch (`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=cbbbf23cb4e4ada2a19eb635bcfad0c9&units=metric`,{
+    const weatherDataFetch = await fetch (`http://localhost:3001/api/weather?city=${cityName}`,{
       headers: {
         Accept:'application/json'
       }});
