@@ -27,20 +27,9 @@ const toCurrency = document.getElementById('to-currency').value;
 
     const result = (amount * rate).toFixed(2) //multiply the user amount input by the toCurrency rate to get the value in round to 2 decimals.
 
-    //onchange of the from currency, 
-    //fetch the rate for the FROM currency 
-    //fetch the rate for the TO currency
-    //compare both rates
-    //display the per currency exchange rate in the DOM. example; 1 USD = 800 NGN
-
-
- 
-
     document.getElementById('converted-value').innerHTML = `${result}${toCurrency}` //display the converted value in the DOM.
 
     localStorage.setItem(`exchangeRates`, JSON.stringify({result, fromCurrency, toCurrency}));
-
-    //updateLiveRate(); //update the live rate on every conversion.
     
     
   }
@@ -56,10 +45,6 @@ const toCurrency = document.getElementById('to-currency').value;
       {e.preventDefault();
       fetchCurrencyRates(); 
     })
-    //OR JUST ENTER THE TYPE OF THE BUTTON TO 'button' INSTEAD OF 'submit' TO PREVENT DEFAULT FORM SUBMISSION BEHAVIOR.
-     //add event listener to the convert button to trigger the fetchCurrencyRates function on click and prevent default form submission behavior.
-
-
 
     document.getElementById('swap-button').addEventListener('click',
       ()=>{
@@ -133,7 +118,6 @@ const toCurrency = document.getElementById('to-currency').value;
         document.getElementById('errorMessage').innerHTML ='Live rate error, try another exchange'
       }
     }
-     //updateLiveRate();
 
      document.getElementById('from-currency').addEventListener('change', updateLiveRate);
      document.getElementById('to-currency').addEventListener('change', updateLiveRate);
