@@ -1,5 +1,4 @@
 
-
 //DOM ELEMENTS
 const date = document.getElementById('date-data');
 const city = document.getElementById('city-data');
@@ -36,6 +35,7 @@ const app = document.getElementById('app-container');
 //function displayWeatherData(data){}
 const getWeather= async ()=> {
   try{
+    document.getElementById('errorText').innerHTML = '';
     const oldError = document.getElementById('error-message');
     if(oldError){
       oldError.remove()
@@ -67,44 +67,24 @@ const getWeather= async ()=> {
   }
 
   catch(error){
-    console.log(error)
-    // const errorDiv = document.createElement('div');
-    // errorDiv.id = 'error-message';
-    app.innerHTML = `<h2>City not found.</h2> 
-    <p>Hint: Check your spelling or try another city.</p>
-    <div>
-    <button id='tryAgainBtn'>Try Again</button>
-    </div>`
+    console.log(error);
 
-   // document.getElementById('app-container').appendChild(errorDiv);
+    city.innerHTML = '';
+    description.innerHTML = '';
+    tempImg.innerHTML = '';
+    temperature.innerHTML = '';
+    tempHigh.innerHTML = '';
+    tempLow.innerHTML = '';
 
-    document.getElementById('tryAgainBtn').addEventListener('click', getWeather);
+    console.log('error fetching weather data');
+    document.getElementById('errorText').innerHTML = `Error fetching weather data. Please try again or check your spelling.`;
+
 
   }
 
 }
 
-/*
-//save the input as user types
-const cityInput = document.getElementById('input-search');
-
-cityInput.addEventListener('input', ()=>{
-  localStorage.setItem('savedCity', cityInput.value)
-});
-
-//on Page load, get the item and display
-window.addEventListener('DOMContentLoaded', ()=>{
-  const savedCity = localStorage.getItem('savedCity');
-  if(savedCity){
-    document.getElementById('input-search').value = savedCity;
-  }
-})
-  */
-
-
-
-
-
+//Load data on page load
 window.addEventListener('DOMContentLoaded', ()=>{
   
   const storage = JSON.parse(localStorage.getItem('getWeather'));
