@@ -43,7 +43,7 @@ const getWeather= async ()=> {
 
     const cityName= document.getElementById('input-search').value;
 
-    const weatherDataFetch = await fetch (`http://localhost:3001/api/weather?city=${cityName}`,{
+    const weatherDataFetch = await fetch (`https://weather-backend-7z41.onrender.com/api/weather?city=${cityName}`,{
       headers: {
         Accept:'application/json'
       }});
